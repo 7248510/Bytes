@@ -32,7 +32,7 @@ void table() {
 void decimalEncode()
 {
     static std::string decimalVal;
-    puts("Please enter a word you'd like converted into hex");
+    puts("Please enter a word you'd like converted into decimal");
     std::getline(std::cin,decimalVal);
     std::cout <<"You've entered: "<< decimalVal << std::endl;
     printf("Decimal value:\n");
