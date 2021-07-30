@@ -1,7 +1,8 @@
 #include <cstdio>
 #include <string>
-int main()
-{
+#include <iostream>
+
+void table() {
     //Learning about Bytes, Char's and Decimials I wrote an ASCII table.
     //Initially it started out with stenography but, it morphed into this 
     //ASCII to Bytes and Hex
@@ -24,6 +25,41 @@ int main()
     printf("\n\n");
     printf("CHAR VALUE:\n");
     for(char& characterPointer : TestVal) {
-        printf("%c",characterPointer);
+        printf("%c\n",characterPointer);
     }
+}
+
+void decimalEncode()
+{
+    static std::string decimalVal;
+    puts("Please enter a word you'd like converted into hex");
+    std::getline(std::cin,decimalVal);
+    std::cout <<"You've entered: "<< decimalVal << std::endl;
+    printf("Decimal value:\n");
+    for(char& characterPointer : decimalVal) {
+        printf("%i ",characterPointer);
+    }
+}
+
+
+void hexEncode()
+{
+    static std::string hexVal;
+    puts("Please enter a word you'd like converted into hex");
+    std::getline(std::cin,hexVal);
+    std::cout <<"You've entered: "<< hexVal << std::endl;
+    printf("Hex Value:\n");
+    for(char& characterPointer : hexVal) {
+        printf("%x ",characterPointer);
+    }
+    std::cout << std::endl;
+}
+
+
+int main(void)
+{
+    table();
+    hexEncode();
+    decimalEncode();
+    return EXIT_SUCCESS;
 }
